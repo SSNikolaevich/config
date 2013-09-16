@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case "$1" in
+    *.bf|*.boo|*.cs|*.h|*.cfg|*.h++|*.css|*.patch|*.phtml|*.rhtml|*.htm| \
+    *.java|*.js|*.lua|*.mak|makefile|Makefile|*.pas|*.php[345]|*.pm| \
+    *.py|*.raw|*.rbw|*.tpl|*.sql|*.aux|*.txt|*.vb|*.kid|*.xml)
+        pygmentize -O bg=dark "$1"
+        ;;
+    *)
+        # We don’t handle this format.
+        exit 1
+esac
+
