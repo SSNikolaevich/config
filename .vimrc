@@ -37,16 +37,27 @@ if has("autocmd")
   filetype indent on
 endif
 
+" Определение типа для некоторых файлов.
+if has("autocmd")
+  autocmd BufRead,BufNewFile *.hrl        set filetype=erlang
+  autocmd BufRead,BufNewFile *.yrl        set filetype=erlang
+  autocmd BufRead,BufNewFile *.xrl        set filetype=erlang
+  autocmd BufRead,BufNewFile *.app        set filetype=erlang
+  autocmd BufRead,BufNewFile *.app.src    set filetype=erlang
+  autocmd BufRead,BufNewFile rebar.config set filetype=erlang
+  autocmd BufRead,BufNewFile Emakefile    set filetype=erlang
+endif
+
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
-set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
-set incsearch		" Incremental search
-set autowrite		" Automatically save before commands like :next and :make
-set hidden             " Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes) in terminals
+set showcmd        " Show (partial) command in status line.
+set showmatch      " Show matching brackets.
+set ignorecase     " Do case insensitive matching
+set smartcase      " Do smart case matching
+set incsearch      " Incremental search
+set autowrite      " Automatically save before commands like :next and :make
+set hidden         " Hide buffers when they are abandoned
+set mouse=a        " Enable mouse usage (all modes) in terminals
 
 " Source a global configuration file if available
 " XXX Deprecated, please move your changes here in /etc/vim/vimrc
@@ -58,8 +69,9 @@ set title                 " Set title of the window
 set ts=4                  " Tab size
 set hlsearch              " Highlight matches with last search pattern
 set number                " Show line numbers
-" set spell                 " Spell checking
-" set spelllang=en,ru
+set spell                 " Spell checking
+set spelllang=en,ru
+set spellfile=~/.vim/spell/exceptions.utf-8.add
 set foldmethod=syntax     " Folding by syntax
 set foldcolumn=4          " Folding column width
 
