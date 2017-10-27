@@ -1,0 +1,71 @@
+OPTIONS=name:Sergey
+OPTIONS=boulder:0,color,menucolors,statushilites
+OPTIONS=msg_window:reversed
+OPTIONS=autopickup,pickup_types:$?!/
+OPTIONS=showexp,time,showscore
+OPTIONS=hitpointbar
+OPTIONS=DECGraphics
+
+# Set the number of messages saved into message history (^P -command)
+OPTIONS=msghistory:50
+
+MENUCOLOR=".* cursed .*"=red
+MENUCOLOR=".* uncursed .*"=cyan
+MENUCOLOR=".* unholy .*"=red
+MENUCOLOR=".* blessed .*"=green
+MENUCOLOR=".* holy .*"=green
+MENUCOLOR=" cursed .* (being worn)"=orange&underline
+
+MENUCOLOR="loadstone\|wand \(of\|called\) cancellation"=brown&underline
+#MENUCOLOR="Amulet of Yendor named"=magenta      # color only the real Amulet
+MENUCOLOR="gold piece"=yellow
+
+#MENUCOLOR="[a-zA-Z] - [a-zA-Z ]+[ ]+[0-9]+\*[ ]+[a-z]+[ ]+[0-9]+%"=magenta  # forgotten spell
+# This version will work on NAO.
+# MENUCOLOR="[a-zA-Z ]+[ ]+[0-9]+\*[ ]+[a-z]+[ ]+[0-9]+%"=magenta  # forgotten spell
+
+
+OPTIONS=hilite_status:title/always/brown
+OPTIONS=hilite_status:gold/always/yellow
+OPTIONS=hilite_status:alignment/always/brown
+
+OPTIONS=hilite_status:hitpoints/<100%/green
+OPTIONS=hilite_status:hitpoints/<66%/yellow
+OPTIONS=hilite_status:hitpoints/<33%/orange
+
+OPTIONS=hilite_status:hitpoints-max/always/brown
+OPTIONS=hilite_status:hitpoints-max/up/green
+OPTIONS=hilite_status:hitpoints-max/down/red
+
+OPTIONS=hilite_status:characteristics/up/green
+OPTIONS=hilite_status:characteristics/down/red
+
+OPTIONS=hilite_status:armor-class/up/red
+OPTIONS=hilite_status:armor-class/down/green
+
+OPTIONS=hilite_status:experience-level/up/green
+OPTIONS=hilite_status:experience-level/down/red
+
+OPTIONS=hilite_status:power/<100%/green
+OPTIONS=hilite_status:power/<66%/yellow
+OPTIONS=hilite_status:power/<33%/orange
+
+OPTIONS=hilite_status:power-max/always/brown
+OPTIONS=hilite_status:power-max/up/green
+OPTIONS=hilite_status:power-max/down/red
+
+OPTIONS=hilite_status:carrying-capacity/Burdened/magenta
+OPTIONS=hilite_status:carrying-capacity/Stressed/brown
+OPTIONS=hilite_status:carrying-capacity/Strained/lightmagenta
+OPTIONS=hilite_status:carrying-capacity/Overtaxed/yellow
+OPTIONS=hilite_status:carrying-capacity/Overloaded/red
+
+OPTIONS=hilite_status:condition/all/cyan
+
+OPTIONS=hilite_status:hunger/0/green
+OPTIONS=hilite_status:hunger/2/brown
+OPTIONS=hilite_status:hunger/3/lightmagenta
+OPTIONS=hilite_status:hunger/4/yellow
+OPTIONS=hilite_status:hunger/5/red
+
+
